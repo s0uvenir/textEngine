@@ -1,0 +1,59 @@
+# Blood Cell game
+# Modified so that there is only one exit state
+
+!begin
+You have made it to the heart.
+> one Enter the right atrium
+> ten Go back
+
+one
+You have entered the right atrium.
+> two Enter the right ventricle
+> ten Go back
+
+two
+You have entered the right ventricle.
+> three Go through the pulmonary valve
+> ten Go back
+
+three
+You have passed through the pulmonary valve.
+> four Go through the pulmonary artery
+> ten Go back
+
+four
+You have gone through the pulmonary artery.
+> five Enter the lungs
+> ten Go back
+
+five
+You have entered the lungs.
+> six Go through the left atrium
+> ten Go back
+
+six
+You have gone through the left atrium.
+> seven Go through the left ventricle
+> ten Go back
+
+seven
+You have gone through the left ventricle.
+> eight Go through the aortic valve
+> ten Go back
+
+eight
+You have gone through the aortic valve.
+> nine Go to the rest of the body
+> ten Go back
+
+nine
+You have gone through the body. Go blood cell!
+> end Continue
+
+ten
+You went back. RIP.
+> end Continue
+
+# Both old "end" states now lead to this single end node
+.end
+The End
