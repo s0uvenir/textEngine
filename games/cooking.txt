@@ -1,0 +1,96 @@
+# Cooking Simulator
+# Added dummy start node so that other nodes cannot reach the true
+# start node
+
+# potential issue:
+# can get more than one 'dry pancake mix' at a time
+
+# every pre-req matches with a content
+# but not every content requires a pre-req
+
+# IE: the first declared pre-req in a node is paired with the first
+# declared content in the node
+
+# if there are no pre-reqs, simply add all contents to inventory
+# if there are pre-reqs, determine which pre-req(s) are in the
+# inventory, remove them, and add the corresponding contents
+
+# at end of game, if there are items in the inventory, they should
+# be listed (seperated by commas)
+
+!begin
+You are ready to make breakfast.
+> pick_ingred Continue...
+
+pick_ingred
+Here are some ingredients. 
+> get_egg Take eggs
+> get_bacon Take bacon
+> get_pancake_mix Take pancakes
+
+get_egg
+You pick up a white egg.
+> crack_egg Crack the egg.
+> cook Fry the egg.
+> end Eat your breakfast.
+-c White egg
+
+get_bacon
+You pick up a few raw strips of bacon.
+> cook Fry the bacon.
+> end Eat your breakfast.
+-c Raw bacon
+
+get_pancake_mix
+You pick up some dry pancake mix.
+> mix_pancake Mix with other ingredients.
+> cook_pancake Cook.
+> syrup Add syrup.
+> end Eat your breakfast.
+-c Dry pancake mix
+
+crack_egg
+You crack the egg open, and pour the yolk into a bowl.
+> cook Fry the egg.
+> end Eat your breakfast.
+-c Egg yolk
+-p White egg
+
+cook
+You fry the food until it is done.
+> end Eat your breakfast.
+> pick_ingred Cook more food.
+-c Fried egg
+-c Cooked bacon
+-c Brown egg
+-p Egg yolk
+-p Raw bacon
+-p White egg
+
+mix_pancake
+You mix the dry pancake mix with the wet ingredients, creating pancake batter.
+> cook_pancake Cook the batter.
+> end Eat your breakfast.
+-c Wet pancake batter
+-p Dry pancake mix
+
+cook_pancake
+You pour the pancake batter into a skillet and cook until you have golden pancakes.
+> end Eat your breakfast.
+> pick_ingred Cook more food.
+-c Pancakes
+-c Pancakes
+-p Dry pancake mix
+-p Wet pancake batter
+
+# if player chooses pick_ingred, could have more than one pancake mix
+# at once (consider altering logic)
+syrup
+You pour syrup over the added food.
+> pick_ingred Make more food.
+> end Eat what is on your plate.
+-c Syrup
+
+.end
+You eat what is on your plate.
+I hope you enjoyed your plate of 

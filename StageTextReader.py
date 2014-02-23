@@ -44,9 +44,30 @@ def readStageTextFile(fileName):
                     raise WatchDogException(errTextPrefix(fileName, lineNum) +
                           'Edge definition must contain a ' +
                           'destination node name and description.')
-                else:
-                    edgeList.append(_EdgeMetaData(currNode, match.group(1),
-                                                 match.group(2), lineNum))
+                edgeList.append(_EdgeMetaData(currNode, match.group(1),
+                                              match.group(2), lineNum))
+            elif line.startswith('-c'):
+                if not currNode:
+                    raise WatchDogException(errTextPrefix(fileName, lineNum) +
+                          'A source node name must precede ' +
+                          'content definition.')
+                match = re.match(r'-c\s*(.+)', line)
+                if not match:
+                    raise WatchDogException(errTextPrefix(fileName, lineNum) +
+                          'Content definition must contain an element' +
+                          ' name.')
+                currNode.contents.append(match.group(1))
+            elif line.startswith('-p'):
+                if not currNode:
+                    raise WatchDogException(errTextPrefix(fileName, lineNum) +
+                          'A source node name must precede ' +
+                          'pre-req definition.')
+                match = re.match(r'-p\s*(.+)', line)
+                if not match:
+                    raise WatchDogException(errTextPrefix(fileName, lineNum) +
+                          'Pre-req definition must contain an element' +
+                          ' name.')
+                currNode.prereqs.append(match.group(1))
             elif not currNode:
                 if re.search(r'\s+', line):
                     raise WatchDogException(errTextPrefix(fileName, lineNum) +

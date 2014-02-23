@@ -1,0 +1,66 @@
+# life game
+
+!birth
+You have entered the world.
+> f Go home with a family.
+> cat_a Flee the hospital to live with cats.
+
+family
+You have chosen to go live with your family!
+> min Get a job.
+> s Go to school.
+> w Go live in the woods.
+
+cat_alley
+You crawl into an alley behind the hospital, filled with cats. They embrace you as their own.
+> sc Go to school.
+> wo Go live in the woods.
+> cat_p Become cat president.
+
+min_wage_job
+You decide to go get a minimum-wage job.
+> ch Start a family.
+> g Work toward a better job.
+
+school
+You have chosen to go to school. You thoroughly enjoy spending the best years of your life studying.
+> chi Start a family.
+> go Get a hot new job.
+
+woods
+You take a page from Thoreau and go live in the woods.
+> camp Terrorize children at summer camp.
+> a Become an acorn peddlar.
+
+cat_president
+After a long campaign of handing out catnip and petting kittens, you have been elected the president of cats!
+> ch Become somewhat normal and start a family.
+> cat_r Retire to Cat-topia.
+
+children
+You meet someone, and create little someones.
+> e And...
+
+good_job
+You have taken an exciting job at Technology Man Co.
+> mil Slip into insanity.
+> end Handle your money reasonably.
+
+camp
+After the Summer Camp for Excitable Teens is built near your cabin--and after finding a rather menacing pickaxe--you decide to dress up as an evil dwarf and terrorize summer camp goers.
+> e And...
+
+acorn_peddler
+Unfortunately, you are the only human in the woods, and squirrels are fairly good at finding acorns on their own.
+> e And...
+
+cat_retire
+You have decided to retire to Cat-topia. Cat food is shaped into your image, and birds are sacrificed to you daily.
+> e And...
+
+millionare
+You have become a deranged millionare. Your days are spent in tribal garb, and working on your "Moustaches of the Apocalypse" diorama.
+> e And...
+
+.end
+Congratulations, you are dead!

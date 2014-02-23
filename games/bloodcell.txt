@@ -3,54 +3,54 @@
 
 !begin
 You have made it to the heart.
-> one Enter the right atrium
-> ten Go back
+> r_atrium Enter the right atrium
+> back Go back
 
-one
+r_atrium
 You have entered the right atrium.
-> two Enter the right ventricle
-> ten Go back
+> r_ventricle Enter the right ventricle
+> back Go back
 
-two
+r_ventricle
 You have entered the right ventricle.
-> three Go through the pulmonary valve
-> ten Go back
+> p_valve Go through the pulmonary valve
+> back Go back
 
-three
+p_valve
 You have passed through the pulmonary valve.
-> four Go through the pulmonary artery
-> ten Go back
+> p_artery Go through the pulmonary artery
+> back Go back
 
-four
+p_artery
 You have gone through the pulmonary artery.
-> five Enter the lungs
-> ten Go back
+> lungs Enter the lungs
+> back Go back
 
-five
+lungs
 You have entered the lungs.
-> six Go through the left atrium
-> ten Go back
+> l_atrium Go through the left atrium
+> back Go back
 
-six
+l_atrium
 You have gone through the left atrium.
-> seven Go through the left ventricle
-> ten Go back
+> l_ventricle Go through the left ventricle
+> back Go back
 
-seven
+l_ventricle
 You have gone through the left ventricle.
-> eight Go through the aortic valve
-> ten Go back
+> a_valve Go through the aortic valve
+> back Go back
 
-eight
+a_valve
 You have gone through the aortic valve.
-> nine Go to the rest of the body
-> ten Go back
+> body Go to the rest of the body
+> back Go back
 
-nine
+body
 You have gone through the body. Go blood cell!
 > end Continue
 
-ten
+back
 You went back. RIP.
 > end Continue
 
